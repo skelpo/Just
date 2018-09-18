@@ -774,9 +774,10 @@ public final class HTTP: NSObject, URLSessionDelegate, JustAdaptor {
         components += queryComponents("\(key)", value)
       }
     } else {
+        let v = value as! String
       components.append((
         percentEncodeString(key),
-        percentEncodeString("\(value)"))
+        percentEncodeString("\(v)"))
       )
     }
 
